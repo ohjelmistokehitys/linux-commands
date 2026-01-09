@@ -15,6 +15,6 @@ jobs:
     if: github.event.repository.name != 'linux-commands' && github.actor != 'github-classroom[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: education/autograding@v1

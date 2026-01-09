@@ -195,7 +195,7 @@
             "setup": "",
             "run": "cat 20_end_process.sh",
             "input": "",
-            "output": "3003",
+            "output": "kill",
             "comparison": "included",
             "timeout": 1,
             "points": 1

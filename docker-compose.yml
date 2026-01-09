@@ -6,8 +6,8 @@ services:
       - ./:/app # Liittää nykyisen hakemiston /app-hakemistoksi kontin sisällä
     working_dir: /app # Asettaa /app-hakemiston työskentelyhakemistoksi kontin sisällä
 
-    tty: true # Varataan pseudo-TTY interaktiivista shelliä varten
-    stdin_open: true # Pitää STDIN:n avoinna interaktiota varten
+    tty: true # ohjaa kontin tulosteet komentoriville
+    stdin_open: true # ohjaa syötteet komentoriviltä konttiin
 
 # Selitys:
 #
