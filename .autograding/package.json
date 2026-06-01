@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "vitest run --reporter=json --reporter=default --output-file=vitest-results-vitest.json",
+    "score-json": "npx --yes tsx src/build-score-json.ts results-vitest.json ../results.json"
+  },
+  "dependencies": {
+    "vitest": "4",
+    "zx": "lite"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^25.9.1"
+  }
+}

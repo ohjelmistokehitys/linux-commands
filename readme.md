@@ -96,7 +96,7 @@ Seuraavilla osioilla perehdytään hakemistoihin ja tiedostoihin liittyviin peru
 
 4. **Logihakemiston listaus**
 
-    Tämän repositorion sisällä on hakemisto nimeltä [**"log"**](./log/). Kirjoita komento, joka listaa kaikki kyseisen alihakemiston sisältämät tiedostot ja hakemistot pitkässä muodossa. Muotoilun tulee olla sama kuin edellisessä kohdassa.
+    Tämän repositorion sisällä on hakemisto nimeltä [**"log"**](./logs/). Kirjoita komento, joka listaa kaikki kyseisen alihakemiston sisältämät tiedostot ja hakemistot pitkässä muodossa. Muotoilun tulee olla sama kuin edellisessä kohdassa.
 
     Lisää käyttämäsi komento `04_list_log_directory.sh`-tiedostoon.
 
@@ -118,14 +118,14 @@ Seuraavat kohdat perehdyttävät tiedostojen ja ympäristömuuttujien tulostamis
 
 7. **Tiedoston sisältö**
 
-    Kirjoita komento, joka tulostaa ruudulle [log/auth.log](log/auth.log)-tiedoston sisällön.
+    Kirjoita komento, joka tulostaa ruudulle [logs/auth.log](logs/auth.log)-tiedoston sisällön.
 
     Lisää käyttämäsi komento `07_cat_auth_log.sh`-tiedostoon.
 
 
 8. **Monen tiedoston sisältö**
 
-    Kirjoita komento, joka tulostaa ruudulle samalla kertaa sekä [log/auth.log](log/auth.log)-tiedoston että [log/access.log](log/access.log)-tiedoston sisällöt.
+    Kirjoita komento, joka tulostaa ruudulle samalla kertaa sekä [logs/auth.log](logs/auth.log)-tiedoston että [logs/access.log](logs/access.log)-tiedoston sisällöt.
 
     Lisää käyttämäsi komento `08_cat_two_files.sh`-tiedostoon.
 
@@ -143,7 +143,7 @@ Uusien tiedostojen ja hakemistojen luominen onnistuu komentoriviltä useilla eri
 
 10. **Luo hakemisto**
 
-    Kirjoita komento, joka luo uuden hakemiston nimeltä `documents`. Luodun hakemiston tulee näkyä nykyisen hakemiston listauksessa.
+    Kirjoita komento, joka luo uuden hakemiston nimeltä `public`. Luodun hakemiston tulee näkyä nykyisen hakemiston listauksessa.
 
     Lisää käyttämäsi komento `10_create_directory.sh`-tiedostoon. Kokeile suorittaa komento ja tarkista, että se luo hakemiston. Hakemiston luonti epäonnistuu, jos samanniminen hakemisto on jo olemassa, joten voit tarvittaessa poistaa aiemmin luodun tyhjän hakemiston.
 
@@ -152,13 +152,13 @@ Uusien tiedostojen ja hakemistojen luominen onnistuu komentoriviltä useilla eri
 
 11. **Luo tiedosto**
 
-    Git ei oletuksena pidä kirjaa tyhjistä hakemistoista. Jotta `documents`-hakemisto saadaan lisättyä versionhallintaan, siihen tulee luoda tiedosto.
+    Git ei oletuksena pidä kirjaa tyhjistä hakemistoista. Jotta `public`-hakemisto saadaan lisättyä versionhallintaan, siihen tulee luoda tiedosto.
 
-    Kirjoita komento, joka lisää äsken luomaasi `documents`-hakemistoon tyhjän tiedoston nimeltä `.gitkeep`. Lue tarvittaessa lisätietoja keskustelusta ["What are the differences between .gitignore and .gitkeep?"](https://stackoverflow.com/a/7229996)
+    Kirjoita komento, joka lisää äsken luomaasi `public`-hakemistoon tyhjän tiedoston nimeltä `.gitkeep`. Lue tarvittaessa lisätietoja keskustelusta ["What are the differences between .gitignore and .gitkeep?"](https://stackoverflow.com/a/7229996)
 
     Lisää tiedoston luomiseksi käyttämäsi komento `11_create_gitkeep.sh`-tiedostoon. Älä luo tässä tehtävässä hakemistoa uudelleen, vaan hyödynnä edellisen skriptin valmiiksi luomaa hakemistoa.
 
-    💡 Nyt kun `documents` ei ole enää tyhjä, lisää myös se versionhallintaan.
+    💡 Nyt kun `public` ei ole enää tyhjä, lisää myös se versionhallintaan.
 
 
 ### Tiedostoon kirjoittaminen
@@ -177,7 +177,7 @@ Tiedostoon kirjoittaminen onnistuu komentoriviltä useilla eri komennoilla. Seur
 
 13. **Tiedoston poistaminen**
 
-    Kirjoita komento, joka poistaa tiedoston `log/error.log`. Jos haluat testata tiedoston poistamista monta kertaa, voit palauttaa tiedoston takaisin Gitin historiasta `git restore` -komennolla: `git restore log/error.log`.
+    Kirjoita komento, joka poistaa tiedoston `logs/error.log`. Jos haluat testata tiedoston poistamista monta kertaa, voit palauttaa tiedoston takaisin Gitin historiasta `git restore` -komennolla: `git restore logs/error.log`.
 
     Lisää käyttämäsi komento `13_remove_file.sh`-tiedostoon.
 
@@ -190,7 +190,7 @@ Eri komentojen tekemiä tulosteita ohjataan usein tiedostoihin tai toisten komen
 
 14. **Tiedostoon ohjaus**
 
-    Kirjoita komento, joka tulostaa kerralla kaikkien `log`-alihakemistossa olevien `.log`-päätteisten tiedostojen sisällöt, ja ohjaa ne uuteen tiedostoon `log/all.txt`.
+    Kirjoita komento, joka tulostaa kerralla kaikkien `log`-alihakemistossa olevien `.log`-päätteisten tiedostojen sisällöt, ja ohjaa ne uuteen tiedostoon `logs/all.txt`.
 
     Lisää käyttämäsi komento `14_cat_to_file.sh`-tiedostoon.
 
@@ -258,6 +258,6 @@ Kun olet suorittanut tehtävän kokonaan tai osittain, varmista, että olet lis�
 
 ## Lisenssit ja tekijänoikeudet
 
-Tiedosto `log/auth.log` on lainattu Digital Oceanin artikkelista ["How To Monitor System Authentication Logs on Ubuntu"](https://www.digitalocean.com/community/tutorials/how-to-monitor-system-authentication-logs-on-ubuntu) ja se on lisensoitu [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. Muut lokitiedostot, Docker compose -tiedosto sekä [salainen viesti](./secret.txt) on luotu [ChatGPT:n](https://chatgpt.com/) avustuksella.
+Tiedosto `logs/auth.log` on lainattu Digital Oceanin artikkelista ["How To Monitor System Authentication Logs on Ubuntu"](https://www.digitalocean.com/community/tutorials/how-to-monitor-system-authentication-logs-on-ubuntu) ja se on lisensoitu [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. Muut lokitiedostot, Docker compose -tiedosto sekä [salainen viesti](./secret.txt) on luotu [ChatGPT:n](https://chatgpt.com/) avustuksella.
 
 Tämän tehtävän on luonut Teemu Havulinna ja se on lisensoitu [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.

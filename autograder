@@ -1,0 +1,18 @@
+FROM node:latest
+
+WORKDIR /app
+
+# Copy package.json and install dependencies first
+COPY ./.autograding/package*.json ./.autograding/
+RUN npm --prefix=.autograding install
+
+# Then, copy remaining files needed for testing
+COPY ./.autograding/ ./.autograding/
+
+# Copy the utilities and scripts that are being tested
+COPY ./logs ./logs
+COPY ./secret.txt ./secret.txt
+COPY --chmod=+x ./*.sh ./
+
+# Finally, run the tests
+RUN npm --prefix=.autograding test
