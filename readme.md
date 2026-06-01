@@ -98,7 +98,7 @@ Seuraavilla osioilla perehdytään hakemistoihin ja tiedostoihin liittyviin peru
 
 4. **Logihakemiston listaus**
 
-    Tämän repositorion sisällä on hakemisto nimeltä [**"log"**](./logs/). Kirjoita komento, joka listaa kaikki kyseisen alihakemiston sisältämät tiedostot ja hakemistot pitkässä muodossa. Muotoilun tulee olla sama kuin edellisessä kohdassa.
+    Tämän repositorion sisällä on hakemisto nimeltä [**"logs"**](./logs/). Kirjoita komento, joka listaa kaikki kyseisen alihakemiston sisältämät tiedostot ja hakemistot pitkässä muodossa. Muotoilun tulee olla sama kuin edellisessä kohdassa.
 
     Lisää käyttämäsi komento `04_list_log_directory.sh`-tiedostoon.
 
@@ -192,7 +192,7 @@ Eri komentojen tekemiä tulosteita ohjataan usein tiedostoihin tai toisten komen
 
 14. **Tiedostoon ohjaus**
 
-    Kirjoita komento, joka tulostaa kerralla kaikkien `log`-alihakemistossa olevien `.log`-päätteisten tiedostojen sisällöt, ja ohjaa ne uuteen tiedostoon `logs/all.txt`.
+    Kirjoita komento, joka tulostaa kerralla kaikkien `logs`-alihakemistossa olevien `.log`-päätteisten tiedostojen sisällöt, ja ohjaa ne uuteen tiedostoon `logs/all.txt`.
 
     Lisää käyttämäsi komento `14_cat_to_file.sh`-tiedostoon.
 
