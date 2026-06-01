@@ -3,7 +3,9 @@
 Tämä repositorio sisältää tehtäviä Linux-komentoihin perehtymiseksi. Komennot ovat yhteensopivia useimpien Linux/Unix-versioiden kanssa, joten yhteensopivuusongelmia **ei pitäisi** ilmentyä. Myös Windows yhdessä [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install):n kanssa toimii hyvin, mutta PowerShell ja cmd eivät riitä tähän tehtävään. Vaihtoehtoisesti voit käyttää [GitHub Codespaces](https://github.com/features/codespaces) -ympäristöä tai [Docker](https://www.docker.com/)-konttia, josta kerrotaan lisää alempana.
 
 > [!WARNING]
-> Ole varovainen käyttäessäsi komentoriviä. Väärät tai virheellisesti käytetyt komennot voivat aiheuttaa korjaamatonta vahinkoa tiedostoille tai järjestelmälle. Älä kopioi ja suorita eri lähteistä mahdollisesti löytämiäsi komentoja ilman, että olet varma siitä, mitä ne tekevät. Jos olet epävarma, kysy neuvoa kurssin keskustelukanavilla. Codespaces-ympäristö, erillinen virtuaalikone tai Docker-kontti voivat auttaa eristämään harjoitukset omasta käyttöjärjestelmästäsi ja muista tiedostoistasi.
+> Ole varovainen käyttäessäsi komentoriviä. Väärät tai virheellisesti käytetyt komennot voivat aiheuttaa korjaamatonta vahinkoa tiedostoille tai järjestelmälle. Älä kopioi ja suorita eri lähteistä mahdollisesti löytämiäsi komentoja ilman, että olet varma siitä, mitä ne tekevät.
+>
+> Jos olet epävarma, kysy neuvoa kurssin keskustelukanavilla. Codespaces-ympäristö, erillinen virtuaalikone tai Docker-kontti voivat auttaa eristämään harjoitukset omasta käyttöjärjestelmästäsi ja muista tiedostoistasi.
 
 
 ## GitHub classroom ja automaattinen arviointi
@@ -66,7 +68,7 @@ Tämä on lämmittelytehtävä, jossa riittää, että suoritat valmiiksi annetu
 1. **Echo**
 
     Voit tulostaa tekstiä komentorivillä `echo`-komennolla. Kokeile kirjoittaa komentoriville `echo 'Hello world!'`.
-    
+
     Avaa sen jälkeen tekstieditorilla oheinen [`01_hello_world.sh`-tiedosto](./01_hello_world.sh) ja seuraa siinä esitettyjä ohjeita. Kun olet valmis, tallenna tiedosto ja kokeile sen suorittamista komentoriviltä `./01_hello_world.sh`. Kun tiedoston suorittaminen tulostaa ruudulle tekstin `Hello world!`, voit siirtyä eteenpäin seuraavaan tehtävään.
 
 
@@ -96,7 +98,7 @@ Seuraavilla osioilla perehdytään hakemistoihin ja tiedostoihin liittyviin peru
 
 4. **Logihakemiston listaus**
 
-    Tämän repositorion sisällä on hakemisto nimeltä [**"log"**](./log/). Kirjoita komento, joka listaa kaikki kyseisen alihakemiston sisältämät tiedostot ja hakemistot pitkässä muodossa. Muotoilun tulee olla sama kuin edellisessä kohdassa.
+    Tämän repositorion sisällä on hakemisto nimeltä [**"logs"**](./logs/). Kirjoita komento, joka listaa kaikki kyseisen alihakemiston sisältämät tiedostot ja hakemistot pitkässä muodossa. Muotoilun tulee olla sama kuin edellisessä kohdassa.
 
     Lisää käyttämäsi komento `04_list_log_directory.sh`-tiedostoon.
 
@@ -118,14 +120,14 @@ Seuraavat kohdat perehdyttävät tiedostojen ja ympäristömuuttujien tulostamis
 
 7. **Tiedoston sisältö**
 
-    Kirjoita komento, joka tulostaa ruudulle [log/auth.log](log/auth.log)-tiedoston sisällön.
+    Kirjoita komento, joka tulostaa ruudulle [logs/auth.log](logs/auth.log)-tiedoston sisällön.
 
     Lisää käyttämäsi komento `07_cat_auth_log.sh`-tiedostoon.
 
 
 8. **Monen tiedoston sisältö**
 
-    Kirjoita komento, joka tulostaa ruudulle samalla kertaa sekä [log/auth.log](log/auth.log)-tiedoston että [log/access.log](log/access.log)-tiedoston sisällöt.
+    Kirjoita komento, joka tulostaa ruudulle samalla kertaa sekä [logs/auth.log](logs/auth.log)-tiedoston että [logs/access.log](logs/access.log)-tiedoston sisällöt.
 
     Lisää käyttämäsi komento `08_cat_two_files.sh`-tiedostoon.
 
@@ -143,7 +145,7 @@ Uusien tiedostojen ja hakemistojen luominen onnistuu komentoriviltä useilla eri
 
 10. **Luo hakemisto**
 
-    Kirjoita komento, joka luo uuden hakemiston nimeltä `documents`. Luodun hakemiston tulee näkyä nykyisen hakemiston listauksessa.
+    Kirjoita komento, joka luo uuden hakemiston nimeltä `public`. Luodun hakemiston tulee näkyä nykyisen hakemiston listauksessa.
 
     Lisää käyttämäsi komento `10_create_directory.sh`-tiedostoon. Kokeile suorittaa komento ja tarkista, että se luo hakemiston. Hakemiston luonti epäonnistuu, jos samanniminen hakemisto on jo olemassa, joten voit tarvittaessa poistaa aiemmin luodun tyhjän hakemiston.
 
@@ -152,13 +154,13 @@ Uusien tiedostojen ja hakemistojen luominen onnistuu komentoriviltä useilla eri
 
 11. **Luo tiedosto**
 
-    Git ei oletuksena pidä kirjaa tyhjistä hakemistoista. Jotta `documents`-hakemisto saadaan lisättyä versionhallintaan, siihen tulee luoda tiedosto.
+    Git ei oletuksena pidä kirjaa tyhjistä hakemistoista. Jotta `public`-hakemisto saadaan lisättyä versionhallintaan, siihen tulee luoda tiedosto.
 
-    Kirjoita komento, joka lisää äsken luomaasi `documents`-hakemistoon tyhjän tiedoston nimeltä `.gitkeep`. Lue tarvittaessa lisätietoja keskustelusta ["What are the differences between .gitignore and .gitkeep?"](https://stackoverflow.com/a/7229996)
+    Kirjoita komento, joka lisää äsken luomaasi `public`-hakemistoon tyhjän tiedoston nimeltä `.gitkeep`. Lue tarvittaessa lisätietoja keskustelusta ["What are the differences between .gitignore and .gitkeep?"](https://stackoverflow.com/a/7229996)
 
     Lisää tiedoston luomiseksi käyttämäsi komento `11_create_gitkeep.sh`-tiedostoon. Älä luo tässä tehtävässä hakemistoa uudelleen, vaan hyödynnä edellisen skriptin valmiiksi luomaa hakemistoa.
 
-    💡 Nyt kun `documents` ei ole enää tyhjä, lisää myös se versionhallintaan.
+    💡 Nyt kun `public` ei ole enää tyhjä, lisää myös se versionhallintaan.
 
 
 ### Tiedostoon kirjoittaminen
@@ -177,7 +179,7 @@ Tiedostoon kirjoittaminen onnistuu komentoriviltä useilla eri komennoilla. Seur
 
 13. **Tiedoston poistaminen**
 
-    Kirjoita komento, joka poistaa tiedoston `log/error.log`. Jos haluat testata tiedoston poistamista monta kertaa, voit palauttaa tiedoston takaisin Gitin historiasta `git restore` -komennolla: `git restore log/error.log`.
+    Kirjoita komento, joka poistaa tiedoston `logs/error.log`. Jos haluat testata tiedoston poistamista monta kertaa, voit palauttaa tiedoston takaisin Gitin historiasta `git restore` -komennolla: `git restore logs/error.log`.
 
     Lisää käyttämäsi komento `13_remove_file.sh`-tiedostoon.
 
@@ -190,7 +192,7 @@ Eri komentojen tekemiä tulosteita ohjataan usein tiedostoihin tai toisten komen
 
 14. **Tiedostoon ohjaus**
 
-    Kirjoita komento, joka tulostaa kerralla kaikkien `log`-alihakemistossa olevien `.log`-päätteisten tiedostojen sisällöt, ja ohjaa ne uuteen tiedostoon `log/all.txt`.
+    Kirjoita komento, joka tulostaa kerralla kaikkien `logs`-alihakemistossa olevien `.log`-päätteisten tiedostojen sisällöt, ja ohjaa ne uuteen tiedostoon `logs/all.txt`.
 
     Lisää käyttämäsi komento `14_cat_to_file.sh`-tiedostoon.
 
@@ -198,8 +200,8 @@ Eri komentojen tekemiä tulosteita ohjataan usein tiedostoihin tai toisten komen
 
 15. **Putkittaminen (piping)**
 
-    Putkittamisen avulla (piping) voit välittää ensimmäisen ohjelman tulosteen toisen ohjelman syötteeksi. Kirjoita yhdistelmä komentoja, jotka näyttävät **20 ensimmäistä riviä** head-komennon ohjeesta. Koko ohjeen saat näkyviin komennolla `man head`, ja tuota ohjetta lukemalla saat selville, miten tiedoston alusta voidaan näyttää vain osa. 
-    
+    Putkittamisen avulla (piping) voit välittää ensimmäisen ohjelman tulosteen toisen ohjelman syötteeksi. Kirjoita yhdistelmä komentoja, jotka näyttävät **20 ensimmäistä riviä** head-komennon ohjeesta. Koko ohjeen saat näkyviin komennolla `man head`, ja tuota ohjetta lukemalla saat selville, miten tiedoston alusta voidaan näyttää vain osa.
+
     Suorita siis ensin komento, joka tulostaa ohjeen. Putkita saamasi tuloste `head`-komennolle siten, että tulosteesta näytetään vain 20 ensimmäistä riviä.
 
     Lisää käyttämäsi komento `15_head.sh`-tiedostoon.
@@ -213,7 +215,7 @@ Pakettien asentaminen, HTTP-pyyntöjen tekeminen ja base64-koodauksen purku ovat
 
 16. **Paketin asentaminen**
 
-    Asenna itsellesi [`curl`-työkalu](https://en.wikipedia.org/wiki/CURL), jonka avulla voit tehdä esimerkiksi HTTP-pyyntöjä kätevästi komentoriviltä. Suosittelemme käyttämään asennuksessa käyttöjärjestelmäsi pakettienhallintatyökalua, kuten [`apt` (Advanced Packaging Tool)](https://ubuntu.com/server/docs/package-management). 
+    Asenna itsellesi [`curl`-työkalu](https://en.wikipedia.org/wiki/CURL), jonka avulla voit tehdä esimerkiksi HTTP-pyyntöjä kätevästi komentoriviltä. Suosittelemme käyttämään asennuksessa käyttöjärjestelmäsi pakettienhallintatyökalua, kuten [`apt` (Advanced Packaging Tool)](https://ubuntu.com/server/docs/package-management).
 
     Lisää käyttämäsi asennuskomento `16_install.sh`-tiedostoon. Jos käyttöjärjestelmässäsi on curl-työkalu jo asennettuna, kirjoita tiedostoon komento, jolla voit tarkastaa sen version, esim. `curl --version`.
 
@@ -258,6 +260,6 @@ Kun olet suorittanut tehtävän kokonaan tai osittain, varmista, että olet lis�
 
 ## Lisenssit ja tekijänoikeudet
 
-Tiedosto `log/auth.log` on lainattu Digital Oceanin artikkelista ["How To Monitor System Authentication Logs on Ubuntu"](https://www.digitalocean.com/community/tutorials/how-to-monitor-system-authentication-logs-on-ubuntu) ja se on lisensoitu [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. Muut lokitiedostot, Docker compose -tiedosto sekä [salainen viesti](./secret.txt) on luotu [ChatGPT:n](https://chatgpt.com/) avustuksella.
+Tiedosto `logs/auth.log` on lainattu Digital Oceanin artikkelista ["How To Monitor System Authentication Logs on Ubuntu"](https://www.digitalocean.com/community/tutorials/how-to-monitor-system-authentication-logs-on-ubuntu) ja se on lisensoitu [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä. Muut lokitiedostot, Docker compose -tiedosto sekä [salainen viesti](./secret.txt) on luotu [ChatGPT:n](https://chatgpt.com/) avustuksella.
 
 Tämän tehtävän on luonut Teemu Havulinna ja se on lisensoitu [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
