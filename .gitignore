@@ -35,6 +35,6 @@ invisible_file
 
 # The following lines are related to the exercises in this repository:
 all.txt
-results.json
+result.json
 
 # In this exercise, your scripts should add new rules below this line

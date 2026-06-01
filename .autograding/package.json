@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "vitest run --reporter=json --reporter=default --output-file=results-vitest.json",
-    "report": "npx --yes tsx src/prepare-report.ts results-vitest.json ../results.json"
+    "report": "npx --yes tsx src/prepare-report.ts results-vitest.json ../result.json"
   },
   "dependencies": {
     "vitest": "4",

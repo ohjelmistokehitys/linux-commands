@@ -4,6 +4,14 @@ services:
     command: /bin/bash -c "npm install && (npm test || true) && npm run report"
     working_dir: /app/.autograding
     tty: true
+    environment:
+      - CLASSROOM=${CLASSROOM}
+      - ASSIGNMENT=${ASSIGNMENT}
+      - USERNAME=${USERNAME}
+      - SUBMISSION_TAG=${SUBMISSION_TAG}
+      - COMMIT_URL=${COMMIT_URL}
+      - RELEASE_URL=${RELEASE_URL}
+      - COMMIT_URL=${COMMIT_URL}
     volumes:
       - ./:/app
 
