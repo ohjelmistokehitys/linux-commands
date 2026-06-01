@@ -1,18 +1,21 @@
-FROM node:latest
+services:
+  autograding:
+    image: node
+    command: /bin/bash -c "npm install && (npm test || true) && npm run report"
+    working_dir: /app/.autograding
+    tty: true
+    volumes:
+      - ./:/app
 
-WORKDIR /app
+      # cache dependencies and avoid installing packages to the host system
+      - node_modules:/app/.autograding/node_modules
 
-# Copy package.json and install dependencies first
-COPY ./.autograding/package*.json ./.autograding/
-RUN npm --prefix=.autograding install
+volumes:
+  node_modules:
 
-# Then, copy remaining files needed for testing
-COPY ./.autograding/ ./.autograding/
-
-# Copy the utilities and scripts that are being tested
-COPY ./logs ./logs
-COPY ./secret.txt ./secret.txt
-COPY --chmod=+x ./*.sh ./
-
-# Finally, run the tests
-RUN npm --prefix=.autograding test
+# This file contains a Docker compose service for running automated grading of the assignment.
+# You are not allowed to edit this file, but you can read it to understand how the autograder works.
+#
+# The autograding can be run locally by running the following command in the terminal:
+#
+#   docker compose --file=autograder run --rm autograding

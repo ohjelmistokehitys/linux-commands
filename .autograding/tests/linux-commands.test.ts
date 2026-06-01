@@ -126,9 +126,10 @@ describe('Writing files', () => {
 
     test('Remove file', async ({ task }) => {
         task.meta.maxPoints = 5;
+        await $`touch ./logs/error.log`;
 
-        const { stdout } = await $`cat ./13_remove_file.sh`;
-        expect(stdout).toContain("error.log");
+        const { stdout } = await $`./13_remove_file.sh; ls -la ./logs/`;
+        expect(stdout).not.toContain("error.log");
     });
 });
 
