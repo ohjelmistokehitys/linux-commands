@@ -24,3 +24,18 @@ export type ScoreOutput = {
     'max-score': number;
     'tests': ScoreTest[];
 };
+
+export type Classroom50Environment = {
+    schema: string,
+    classroom: string,
+    assignment: string,
+    usernames: string[],
+    submission: string,
+    commit: string,
+    release: string,
+    review: string,
+    datetime: string
+};
+
+// See https://github.com/foundation50/classroom50/wiki/Autograders#the-resultjson-contract
+export type Classroom50Report = ScoreOutput & Classroom50Environment;

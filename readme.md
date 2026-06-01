@@ -3,7 +3,9 @@
 Tämä repositorio sisältää tehtäviä Linux-komentoihin perehtymiseksi. Komennot ovat yhteensopivia useimpien Linux/Unix-versioiden kanssa, joten yhteensopivuusongelmia **ei pitäisi** ilmentyä. Myös Windows yhdessä [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install):n kanssa toimii hyvin, mutta PowerShell ja cmd eivät riitä tähän tehtävään. Vaihtoehtoisesti voit käyttää [GitHub Codespaces](https://github.com/features/codespaces) -ympäristöä tai [Docker](https://www.docker.com/)-konttia, josta kerrotaan lisää alempana.
 
 > [!WARNING]
-> Ole varovainen käyttäessäsi komentoriviä. Väärät tai virheellisesti käytetyt komennot voivat aiheuttaa korjaamatonta vahinkoa tiedostoille tai järjestelmälle. Älä kopioi ja suorita eri lähteistä mahdollisesti löytämiäsi komentoja ilman, että olet varma siitä, mitä ne tekevät. Jos olet epävarma, kysy neuvoa kurssin keskustelukanavilla. Codespaces-ympäristö, erillinen virtuaalikone tai Docker-kontti voivat auttaa eristämään harjoitukset omasta käyttöjärjestelmästäsi ja muista tiedostoistasi.
+> Ole varovainen käyttäessäsi komentoriviä. Väärät tai virheellisesti käytetyt komennot voivat aiheuttaa korjaamatonta vahinkoa tiedostoille tai järjestelmälle. Älä kopioi ja suorita eri lähteistä mahdollisesti löytämiäsi komentoja ilman, että olet varma siitä, mitä ne tekevät.
+>
+> Jos olet epävarma, kysy neuvoa kurssin keskustelukanavilla. Codespaces-ympäristö, erillinen virtuaalikone tai Docker-kontti voivat auttaa eristämään harjoitukset omasta käyttöjärjestelmästäsi ja muista tiedostoistasi.
 
 
 ## GitHub classroom ja automaattinen arviointi
@@ -66,7 +68,7 @@ Tämä on lämmittelytehtävä, jossa riittää, että suoritat valmiiksi annetu
 1. **Echo**
 
     Voit tulostaa tekstiä komentorivillä `echo`-komennolla. Kokeile kirjoittaa komentoriville `echo 'Hello world!'`.
-    
+
     Avaa sen jälkeen tekstieditorilla oheinen [`01_hello_world.sh`-tiedosto](./01_hello_world.sh) ja seuraa siinä esitettyjä ohjeita. Kun olet valmis, tallenna tiedosto ja kokeile sen suorittamista komentoriviltä `./01_hello_world.sh`. Kun tiedoston suorittaminen tulostaa ruudulle tekstin `Hello world!`, voit siirtyä eteenpäin seuraavaan tehtävään.
 
 
@@ -198,8 +200,8 @@ Eri komentojen tekemiä tulosteita ohjataan usein tiedostoihin tai toisten komen
 
 15. **Putkittaminen (piping)**
 
-    Putkittamisen avulla (piping) voit välittää ensimmäisen ohjelman tulosteen toisen ohjelman syötteeksi. Kirjoita yhdistelmä komentoja, jotka näyttävät **20 ensimmäistä riviä** head-komennon ohjeesta. Koko ohjeen saat näkyviin komennolla `man head`, ja tuota ohjetta lukemalla saat selville, miten tiedoston alusta voidaan näyttää vain osa. 
-    
+    Putkittamisen avulla (piping) voit välittää ensimmäisen ohjelman tulosteen toisen ohjelman syötteeksi. Kirjoita yhdistelmä komentoja, jotka näyttävät **20 ensimmäistä riviä** head-komennon ohjeesta. Koko ohjeen saat näkyviin komennolla `man head`, ja tuota ohjetta lukemalla saat selville, miten tiedoston alusta voidaan näyttää vain osa.
+
     Suorita siis ensin komento, joka tulostaa ohjeen. Putkita saamasi tuloste `head`-komennolle siten, että tulosteesta näytetään vain 20 ensimmäistä riviä.
 
     Lisää käyttämäsi komento `15_head.sh`-tiedostoon.
@@ -213,7 +215,7 @@ Pakettien asentaminen, HTTP-pyyntöjen tekeminen ja base64-koodauksen purku ovat
 
 16. **Paketin asentaminen**
 
-    Asenna itsellesi [`curl`-työkalu](https://en.wikipedia.org/wiki/CURL), jonka avulla voit tehdä esimerkiksi HTTP-pyyntöjä kätevästi komentoriviltä. Suosittelemme käyttämään asennuksessa käyttöjärjestelmäsi pakettienhallintatyökalua, kuten [`apt` (Advanced Packaging Tool)](https://ubuntu.com/server/docs/package-management). 
+    Asenna itsellesi [`curl`-työkalu](https://en.wikipedia.org/wiki/CURL), jonka avulla voit tehdä esimerkiksi HTTP-pyyntöjä kätevästi komentoriviltä. Suosittelemme käyttämään asennuksessa käyttöjärjestelmäsi pakettienhallintatyökalua, kuten [`apt` (Advanced Packaging Tool)](https://ubuntu.com/server/docs/package-management).
 
     Lisää käyttämäsi asennuskomento `16_install.sh`-tiedostoon. Jos käyttöjärjestelmässäsi on curl-työkalu jo asennettuna, kirjoita tiedostoon komento, jolla voit tarkastaa sen version, esim. `curl --version`.
 

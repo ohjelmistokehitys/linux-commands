@@ -22,14 +22,14 @@ describe('Hello world', () => {
 
 describe('Folders', () => {
 
-    test('Prints the working directory', async ({ task }) => {
+    test('Print the working directory', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`./02_print_working_directory.sh`;
         expect(stdout).toContain($.cwd);
     });
 
-    test('Lists the contents of the current directory', async ({ task }) => {
+    test('List the contents of the current directory', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         await $`touch .gitignore readme.md`;
@@ -39,7 +39,7 @@ describe('Folders', () => {
         expect(stdout).toContain('readme.md');
     });
 
-    test('Lists the contents of the log directory', async ({ task }) => {
+    test('List the contents of the log directory', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         await $`touch logs/access.log`;
@@ -48,7 +48,7 @@ describe('Folders', () => {
         expect(stdout).toContain('access.log');
     });
 
-    test('Lists the contents of the parent directory', async ({ task }) => {
+    test('List the contents of the parent directory', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const currentDirName = (await $`basename $(pwd)`).stdout.trim();
@@ -57,7 +57,7 @@ describe('Folders', () => {
         expect(stdout).toContain(currentDirName);
     });
 
-    test('Lists the contents of the home directory', async ({ task }) => {
+    test('List the contents of the home directory', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`cat ./06_list_home_directory.sh`;
@@ -67,7 +67,7 @@ describe('Folders', () => {
 
 
 describe('Files and variables', () => {
-    test('Listing authentication log', async ({ task }) => {
+    test('List authentication log', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`./07_cat_auth_log.sh`;
@@ -82,7 +82,7 @@ describe('Files and variables', () => {
 
     });
 
-    test('Path variable', async ({ task }) => {
+    test('Echo path variable', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`./09_echo_path.sh`;
@@ -93,7 +93,7 @@ describe('Files and variables', () => {
 
 describe('Creating files and folders', () => {
 
-    test('Creates a directory', async ({ task }) => {
+    test('Create a directory', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         await $`rm -rf public`;
@@ -103,7 +103,7 @@ describe('Creating files and folders', () => {
         expect(stdout).toContain("public");
     });
 
-    test('Creates a .gitkeep file', async ({ task }) => {
+    test('Create a .gitkeep file', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         await $`./11_create_gitkeep.sh`;
@@ -152,19 +152,19 @@ describe('Redirection and piping', () => {
 });
 
 describe('CURL and base64', () => {
-    test('Installing curl', async ({ task }) => {
+    test('Install curl', async ({ task }) => {
         task.meta.maxPoints = 5;
         const { stdout } = await $`cat 16_install.sh`;
         expect(stdout).toContain("curl");
     });
 
-    test('Fetching data with curl', async ({ task }) => {
+    test('Fetch data with curl', async ({ task }) => {
         task.meta.maxPoints = 5;
         const { stdout } = await $`cat 17_curl.sh`;
         expect(stdout).toContain("curl")
     });
 
-    test('Base64 decoding', async ({ task }) => {
+    test('Decode base64', async ({ task }) => {
         task.meta.maxPoints = 5;
         const { stdout } = await $`./18_base64.sh`;
         expect(stdout).toContain("Once upon a time");
@@ -173,7 +173,7 @@ describe('CURL and base64', () => {
 
 describe('Processes', () => {
 
-    test('Listing processes', async ({ task }) => {
+    test('List processes', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`cat 19_processes.sh`;
@@ -181,7 +181,7 @@ describe('Processes', () => {
 
     })
 
-    test('Ending a process', async ({ task }) => {
+    test('End a process', async ({ task }) => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`cat 20_end_process.sh`;
