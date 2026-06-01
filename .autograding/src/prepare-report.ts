@@ -55,25 +55,25 @@ async function main(): Promise<void> {
 }
 
 function getAssignmentEnvironment(): Classroom50Environment {
-    const classroom = process.env.CLASSROOM!;
-    const assignment = process.env.ASSIGNMENT!;
-    const submission = process.env.SUBMISSION_TAG!;
-    const username = process.env.USERNAME!;
-    const commit = process.env.COMMIT_URL!;
-    const release = process.env.RELEASE_URL!;
-
-    const data = {
+    return {
         schema: 'classroom50/result/v1',
-        classroom,
-        assignment,
-        usernames: [username],
-        submission,
-        commit,
-        release,
-        review: commit,
+        classroom: getEnv('CLASSROOM'),
+        assignment: getEnv('ASSIGNMENT'),
+        usernames: [getEnv('USERNAME')],
+        submission: getEnv('SUBMISSION_TAG'),
+        commit: getEnv('COMMIT_URL'),
+        release: getEnv('RELEASE_URL'),
+        review: getEnv('COMMIT_URL'),
         datetime: new Date().toISOString()
     };
-    return data;
+}
+
+function getEnv(name: string, fallback = ""): string {
+    const value = process.env[name];
+    if (!value) {
+        console.warn(`Environment variable not set: ${name}`);
+    }
+    return value ?? fallback;
 }
 
 function toNumber(value: unknown): number {
