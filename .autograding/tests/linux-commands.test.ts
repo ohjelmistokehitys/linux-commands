@@ -148,7 +148,10 @@ describe('Redirection and piping', () => {
         task.meta.maxPoints = 5;
 
         const { stdout } = await $`./15_head.sh`;
-        expect(stdout).toContain("DESCRIPTION");
+        expect(stdout).toMatch(/Print the first 10 lines of each FILE to standard output./i);
+
+        const lines = stdout.trim().split("\n");
+        expect(lines.length).toBe(5);
     });
 });
 

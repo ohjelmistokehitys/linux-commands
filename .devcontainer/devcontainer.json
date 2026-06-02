@@ -1,0 +1,11 @@
+{
+	"name": "Development container (Linux commands, ${devcontainerId})",
+	// See https://github.com/devcontainers/templates/tree/main/src/ubuntu
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"mounts": [
+		// Mounts the node_modules folder in the autograding as a volume. Prevents installing packages in the host system.
+		"type=volume,source=node_modules_cache_${devcontainerId},target=${containerWorkspaceFolder}/.autograding/node_modules/"
+	],
+	// Change the ownership of the node_modules folder to the vscode user (the volume is owned by root by default)
+	"postCreateCommand": "sudo chown vscode:vscode ${containerWorkspaceFolder}/.autograding/node_modules -R"
+}
