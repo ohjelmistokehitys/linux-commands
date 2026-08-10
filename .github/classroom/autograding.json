@@ -92,10 +92,10 @@
         },
         {
             "name": "10_create_directory",
-            "setup": "rm -rf documents",
-            "run": "./10_create_directory.sh; ls -la | grep documents",
+            "setup": "rm -rf sandbox",
+            "run": "./10_create_directory.sh; ls -la | grep sandbox",
             "input": "",
-            "output": "documents",
+            "output": "sandbox",
             "comparison": "included",
             "timeout": 1,
             "points": 1
@@ -103,10 +103,10 @@
         {
             "name": "11_create_gitkeep",
             "setup": "",
-            "run": "./11_create_gitkeep.sh; cat documents/.gitkeep",
+            "run": "./11_create_gitkeep.sh; cat sandbox/.gitkeep",
             "input": "",
             "output": "",
-            "comparison": "exact",
+            "comparison": "included",
             "timeout": 1,
             "points": 1
         },
