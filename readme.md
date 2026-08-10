@@ -29,9 +29,11 @@ Kun GitHub Actions on saanut koodisi suoritettua, näet tuloksen GitHub-reposito
 Klikkaamalla yllä olevan linkin takaa viimeisintä "GitHub Classroom Workflow" -suoritusta, saat tarkemmat tiedot tehtävän arvioinnista. Sivun alaosassa näkyy saamasi pisteet. Klikkaamalla "Autograding"-otsikkoa pääset katsomaan tarkemmin arvioinnissa suoritetut vaiheet ja niiden tulokset.
 
 
-## Development container sekä Codespaces (suositeltu)
+## Docker, Development container ja Codespaces (suositeltu)
 
-Tehtävän suorittaminen omassa eristetyssä ympäristössä on suositeltavaa sekä oman käyttöjärjestelmän suojaamiseksi että arviointikoneen ympäristön jäljittelemiseksi. Tähän tarkoitukseen sopii hyvin [Visual Studio Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) -laajennus, joka hyödyntää Docker-kontteja. Tämän tässä repositoriossa on valmiiksi määritetty [devcontainer](./devcontainer), joka luo kehitysympäristön Docker-konttiin. Voit myös avata development containerin GitHub Codespacesissa seuraamalla [tätä ohjetta](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository#creating-a-codespace).
+Tehtävän suorittaminen omassa eristetyssä ympäristössä on suositeltavaa sekä oman käyttöjärjestelmän suojaamiseksi että arviointikoneen ympäristön jäljittelemiseksi. Tähän tarkoitukseen sopii hyvin [Visual Studio Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) -laajennus, joka hyödyntää Docker-kontteja. Voit myös avata development containerin GitHub Codespacesissa seuraamalla [tätä ohjetta](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository#creating-a-codespace).
+
+Vaihtoehtoisesti, voit myös asentaa Dockerin ja käynnistää uuden kontin [compose.yaml](./compose.yaml)-tiedoston avulla. Komento `docker compose run ubuntu` ajettuna tässä hakemistossa käynnistää uuden Ubuntu-kontin, jossa voit suorittaa tehtävät. Kontti on eristetty omasta käyttöjärjestelmästäsi, joten se on turvallinen ympäristö harjoitella komentorivin käyttöä. Kontti voidaan poistaa käytön jälkeen komennolla `docker compose down`.
 
 
 ## Tehtävät

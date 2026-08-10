@@ -1,0 +1,17 @@
+services:
+  ubuntu:
+    image: ubuntu:latest  # Official image: https://hub.docker.com/_/ubuntu
+    command: /bin/bash    # Starts a Bash shell inside the container
+    volumes:
+      - ./:/app           # Mounts the current directory into /app inside the container
+    working_dir: /app     # Sets /app as the working directory inside the container
+
+    tty: true             # Attaches the container's output to the terminal
+    stdin_open: true      # Keeps stdin open so you can interact with the container
+
+# Notes:
+#
+# The command `docker compose run ubuntu` starts a new Docker container using the `ubuntu`
+# service defined in this file. It creates a new container, runs the specified `command`
+# (/bin/bash), and provides access to an interactive shell because the service is configured
+# for interactive use with `tty: true` and `stdin_open: true`.
