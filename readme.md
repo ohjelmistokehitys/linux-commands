@@ -2,12 +2,12 @@
 
 (For Finnish version, see [readme_fi.md](./readme_fi.md).)
 
-This repository contains exercises for learning Linux commands. The commands are compatible with most Linux/Unix versions, so compatibility issues should not occur. Windows also works well together with [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install), but *PowerShell* and *cmd* are not suitable for this exercise. Alternatively, you can use a [GitHub Codespaces](https://github.com/features/codespaces), a [development container](https://code.visualstudio.com/docs/remote/containers) or a Docker container, which is described in more detail below.
+This repository contains exercises for learning Linux commands. The commands are compatible with most Linux/Unix versions, so compatibility issues should not occur. Windows also works well together with [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install), but *PowerShell* and *cmd* are not suitable for this exercise. Alternatively, you can use a [GitHub Codespace](https://github.com/features/codespaces), a [development container](https://code.visualstudio.com/docs/remote/containers) or a Docker container, which are described in more detail below.
 
 > [!WARNING]
 > Be careful when using the command line. Incorrect or improperly used commands can cause irreversible damage to files or the system. Do not copy and run commands you find in other sources unless you are sure what they do.
 >
-> If you are unsure, ask for advice in the course discussion channels. A Codespaces environment, a separate virtual machine, a development container, or a Docker container can help isolate the exercises from your own operating system and other files.
+> If you are unsure, ask for advice in the course discussion channels. A codespace, a separate virtual machine, a development container, or a Docker container can help isolate the exercises from your own operating system and other files.
 
 
 ## Review and automated grading of exercises
@@ -15,11 +15,11 @@ This repository contains exercises for learning Linux commands. The commands are
 Exercises are reviewed and graded by automated tests. The tests run your commands and check the results. Behind the scenes, the [GitHub Actions](https://github.com/features/actions) continuous integration service is used. You can try the exercises multiple times if necessary. In that case, create a new commit and push the changes to GitHub again.
 
 
-## Cloning the exercises
+## Starting the exercises
 
-Once you have accepted the exercise and received a personal copy of the repository, clone it to your own machine with the `git clone` command. Then, in the terminal, change into the cloned directory (for example, `cd repository-name`).
+Check the course instructions for information on how to start the exercise and create your copy of the repository.
 
-When cloning the repository, make sure your own GitHub username is at the end of the Git address. If your username is missing from the address, that is not your personal copy of the exercise. In that case, check the course instructions for how to accept the exercise.
+Once you have started the exercise and created a personal copy of the repository, clone it to your own machine with the `git clone` command. Then, in the terminal, change into the cloned directory (for example, `cd repository-name`). Alternatively, you can use remote development environments such as [GitHub Codespaces](https://github.com/features/codespaces).
 
 
 ## Submitting your solutions

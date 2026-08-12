@@ -1,6 +1,6 @@
 # Linux-komennot
 
-Tämä repositorio sisältää tehtäviä Linux-komentoihin perehtymiseksi. Komennot ovat yhteensopivia useimpien Linux/Unix-versioiden kanssa, joten yhteensopivuusongelmia **ei pitäisi** ilmentyä. Myös Windows yhdessä [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install):n kanssa toimii hyvin, mutta *PowerShell* ja *cmd* eivät sovellu tähän tehtävään. Vaihtoehtoisesti voit käyttää [GitHub Codespaces](https://github.com/features/codespaces) tai [development container](https://code.visualstudio.com/docs/remote/containers) -ympäristöä, josta kerrotaan lisää alempana.
+Tämä repositorio sisältää tehtäviä Linux-komentoihin perehtymiseksi. Komennot ovat yhteensopivia useimpien Linux/Unix-versioiden kanssa, joten yhteensopivuusongelmia **ei pitäisi** ilmentyä. Myös Windows yhdessä [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install):n kanssa toimii hyvin, mutta *PowerShell* ja *cmd* eivät sovellu tähän tehtävään. Vaihtoehtoisesti voit käyttää [GitHub Codespace](https://github.com/features/codespaces)- tai [development container](https://code.visualstudio.com/docs/remote/containers) -ympäristöä, josta kerrotaan lisää alempana.
 
 > [!WARNING]
 > Ole varovainen käyttäessäsi komentoriviä. Väärät tai virheellisesti käytetyt komennot voivat aiheuttaa korjaamatonta vahinkoa tiedostoille tai järjestelmälle. Älä kopioi ja suorita eri lähteistä mahdollisesti löytämiäsi komentoja ilman, että olet varma siitä, mitä ne tekevät.
@@ -13,20 +13,20 @@ Tämä repositorio sisältää tehtäviä Linux-komentoihin perehtymiseksi. Kome
 Tehtävät tarkastetaan ja arvostellaan automaattisilla testeillä. Testit suorittavat komentosi ja tarkastavat niiden tulokset. Taustalla hyödynnetään [GitHub actions](https://github.com/features/actions) -nimistä jatkuvan integroinnin palvelua. Voit tarvittaessa yrittää tehtäviä monta kertaa. Tee tällöin uusi commit, ja vie muutokset uudelleen GitHubiin.
 
 
-## Harjoitusten kloonaaminen
+## Harjoituksen aloittaminen
 
-Kun olet hyväksynyt tehtävän ja saanut repositoriosta henkilökohtaisen kopion, kloonaa se itsellesi `git clone` -komennolla. Siirry sen jälkeen komentorivillä klonattuun hakemistoon (esim. `cd repositorion-nimi`).
+Tutustu kurssin ohjeisiin tehtävän aloittamisen ja oman repositorion luomisen osalta.
 
-Kloonatessasi repositoriota varmista, että Git-osoitteen lopussa on oma GitHub-käyttäjänimesi. Jos käyttäjänimesi puuttuu osoitteesta, kyseessä ei ole henkilökohtainen kopiosi tehtävästä. Tarkasta tässä tapauksessa kurssin ohjeet tehtävän hyväksymiseksi.
+Kun olet aloittanut tehtävän ja luonut henkilökohtaisen kopion repositoriosta, kloonaa se itsellesi `git clone` -komennolla. Siirry sen jälkeen komentorivillä klonattuun hakemistoon (esim. `cd repositorion-nimi`). Vaihtoehtoisesti voit käyttää etäkehitysympäristöjä, kuten [GitHub Codespaces](https://github.com/features/codespaces).
 
 
-## Vastausten lähettäminen
+## Ratkaisujen lähettäminen
 
 Kun olet saanut osan tai kaikki tehtävistä ratkaistua ja commitoinut vastauksesi, lähetä ratkaisut arvioitavaksi `git push`-komennolla. Git push käynnistää automaattisesti workflow:n, joka testaa kaikki komentosi ja antaa niistä joko hyväksytyn tai hylätyn tuloksen.
 
-Kun GitHub Actions on saanut koodisi suoritettua, näet tuloksen GitHub-repositoriosi [Actions-välilehdellä](../../actions/workflows/classroom.yml). Arvioinnin valmistumiseen kuluu tyypillisesti pari minuuttia.
+Kun GitHub Actions on saanut koodisi suoritettua, näet tuloksen GitHub-repositoriosi actions-välilehdellä. Arvioinnin valmistumiseen kuluu tyypillisesti pari minuuttia.
 
-Klikkaamalla yllä olevan linkin takaa viimeisintä "GitHub Classroom Workflow" -suoritusta, saat tarkemmat tiedot tehtävän arvioinnista. Sivun alaosassa näkyy saamasi pisteet. Klikkaamalla "Autograding"-otsikkoa pääset katsomaan tarkemmin arvioinnissa suoritetut vaiheet ja niiden tulokset.
+Klikkaamalla viimeisintä autograding-suoritusta, saat tarkemmat tiedot tehtävän arvioinnista. Sivun alaosassa näkyy saamasi pisteet. Klikkaamalla "Autograding"-otsikkoa pääset katsomaan tarkemmin arvioinnissa suoritetut vaiheet ja niiden tulokset.
 
 
 ## Docker, Development container ja Codespaces (suositeltu)

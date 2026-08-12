@@ -145,7 +145,7 @@
             "setup": "",
             "run": "./15_head.sh",
             "input": "",
-            "output": "DESCRIPTION",
+            "output": "Print the first",
             "comparison": "included",
             "timeout": 1,
             "points": 1
