@@ -20,9 +20,9 @@ Once you have accepted the exercise and received a personal copy of the reposito
 When cloning the repository, make sure your own GitHub username is at the end of the Git address. If your username is missing from the address, that is not your personal copy of the exercise. In that case, check the course instructions for how to accept the exercise.
 
 
-## Submitting your answers
+## Submitting your solutions
 
-Once you have solved part or all of the exercises and committed your answers, submit them for evaluation with the `git push` command. Git push will automatically trigger a workflow that tests all of your commands and gives them either an accepted or rejected result.
+Once you have solved part or all of the exercises and committed your solutions, submit them for evaluation with the `git push` command. Git push will automatically trigger a workflow that tests all of your commands and gives them either an accepted or rejected result.
 
 After GitHub Actions has run your code, you can see the result in the Actions tab of your GitHub repository. The evaluation usually takes a couple of minutes to complete.
 

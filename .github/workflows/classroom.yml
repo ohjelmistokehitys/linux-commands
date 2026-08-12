@@ -1,4 +1,4 @@
-name: GitHub Classroom Workflow
+name: Autograding Workflow
 
 on:
   - push
@@ -12,7 +12,8 @@ permissions:
 jobs:
   build:
     name: Autograding
-    if: github.event.repository.name != 'linux-commands' && github.actor != 'github-classroom[bot]'
+    if: (github.event_name != 'push' || github.event.head_commit.message != 'Initial commit')
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
