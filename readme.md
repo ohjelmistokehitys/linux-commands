@@ -1,5 +1,7 @@
 # Linux commands
 
+(For Finnish version, see [readme_fi.md](./readme_fi.md).)
+
 This repository contains exercises for learning Linux commands. The commands are compatible with most Linux/Unix versions, so compatibility issues should not occur. Windows also works well together with [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install), but *PowerShell* and *cmd* are not suitable for this exercise. Alternatively, you can use a [GitHub Codespaces](https://github.com/features/codespaces), a [development container](https://code.visualstudio.com/docs/remote/containers) or a Docker container, which is described in more detail below.
 
 > [!WARNING]
