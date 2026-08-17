@@ -19,3 +19,4 @@ jobs:
       - uses: actions/checkout@v6
 
       - uses: education/autograding@v1
+        timeout-minutes: 1
